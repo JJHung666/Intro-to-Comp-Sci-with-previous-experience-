@@ -65,10 +65,9 @@ import time
 # timer(timer_1)
 
 def clock_V2():
-	i = 1
 	time_passed = 0
-	while i > 0:
-		# time.sleep(.1)
+	while True:
+		time.sleep(.1)
 		time_passed += 1
 		hour = (time_passed//36000)%24
 		minute = (time_passed//600)%60
