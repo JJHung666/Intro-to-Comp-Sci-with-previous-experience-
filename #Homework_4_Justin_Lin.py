@@ -1,4 +1,4 @@
-## #Homework_4_Justin_Lin.py
+# #Homework_4_Justin_Lin.py
 # Q#1:
 def triangle_number(x):
 	y = 0 
@@ -70,10 +70,22 @@ def clock_V2():
 		time.sleep(.1)
 		time_passed += 1
 		hour = (time_passed//36000)%24
+		if hour < 10:
+			hour_shown = '0'
+		else:
+			hour_shown = ''
 		minute = (time_passed//600)%60
+		if minute < 10:
+			minute_shown = '0'
+		else:
+			minute_shown = ''
 		second = (time_passed//10)%60
+		if second < 10:
+			second_shown = '0'
+		else:
+			second_shown = ''
 		tenth_sec = time_passed % 10
-		print(str(hour)+':'+str(minute)+':'+str(second)+'.'+str(tenth_sec))
+		print(str(hour_shown)+str(hour)+':'+str(minute_shown)+str(minute)+':'+str(second_shown)+str(second)+'.'+str(tenth_sec))
 	pass
 
 clock_V2()
